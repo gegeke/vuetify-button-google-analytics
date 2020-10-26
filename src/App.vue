@@ -1,28 +1,58 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col>
+            <ex-btn
+              :gacategory="category"
+              :galabel="label"
+              :gavalue="value"
+              @click="handleExtendedButtonClick"
+            >
+              Extended Vuetify button
+            </ex-btn>
+          </v-col>
+          <v-col>
+            <v-text-field
+              label="GA Category"
+              v-model="category"
+            />
+            <v-text-field
+              label="GA Label"
+              v-model="label"
+            />
+            <v-text-field
+              label="GA Value"
+              v-model="value"
+            />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ExBtn from '@/components/ExBtn'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ExBtn
+  },
+  data () {
+    return {
+      category: null,
+      label: null,
+      value: null
+    }
+  },
+  methods: {
+    handleExtendedButtonClick (e) {
+      // just to see that the click handler still works
+      console.log(e)
+    }
   }
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
