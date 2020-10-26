@@ -1,4 +1,6 @@
-# vuetify-button-google-analytics
+# Vuetify Button & Google Analytics
+
+This repo is for the article published on medium.com: [How to add Google Analytics Tracking on Vuetify buttons](https://muka-gergely.medium.com/how-to-add-google-analytics-tracking-onvuetify-buttons-2b33c7d16594)
 
 ## Project setup
 ```
